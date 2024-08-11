@@ -1,19 +1,10 @@
 buildscript {
-    ext {
-        kotlin_version = '1.6.10'
-        compose_version = '1.0.5'
-    }
-    repositories {
-        google()
-        mavenCentral()
-        gradlePluginPortal()
-    }
     dependencies {
-        classpath "com.android.tools.build:gradle:7.1.1"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath libs.hilt.android.gradle.plugin
     }
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
+plugins {
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.jetbrains.kotlin.android) apply false
 }
