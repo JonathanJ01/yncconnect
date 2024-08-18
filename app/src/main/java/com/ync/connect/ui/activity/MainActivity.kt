@@ -1,12 +1,12 @@
-package com.bryanjeon.pickwinners.ui.activity
+package com.ync.connect.ui.activity
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Scaffold
-import androidx.compose.ui.Modifier
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.ync.connect.ui.theme.AppTheme
@@ -36,4 +36,10 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun ShowPreview() {
+    Text(text = "Hello YNC Connect")
 }
